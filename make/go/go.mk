@@ -28,8 +28,6 @@ SKIP_GOLANGCI_LINT ?=
 GOPKGS ?= $(GO_ALL_REPO_PKGS)
 # Runtime
 GOLANGCILINTTIMEOUT ?= 3m0s
-# Runtime GONOTESTCACHE
-# Runtime COVEROPEN
 
 COVER_HTML := $(TMP)/cover.html
 COVER_TXT := $(TMP)/cover.txt
