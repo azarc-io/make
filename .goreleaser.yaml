@@ -1,0 +1,23 @@
+release:
+  github:
+    owner: azarc-io
+    name: your-project
+  name_template: 'Release {{.Tag}}'
+  draft: false
+
+builds:
+  - skip: true
+
+snapshot:
+  name_template: "{{ incpatch .Version }}-next"
+
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - '^docs:'
+      - '^test:'
+
+checksum:
+  name_template: 'SHA256SUMS'
+  algorithm: sha256
