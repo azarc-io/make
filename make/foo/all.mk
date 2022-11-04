@@ -3,10 +3,7 @@ BUF_BREAKING_INPUT := .
 BUF_BREAKING_AGAINST_INPUT ?= .git\#branch=main
 BUF_FORMAT_INPUT := .
 BUF_VERSION ?= v1.9.0
-
-GO_GET_PKGS := $(GO_GET_PKGS) \
-	github.com/srikrsna/protoc-gen-gotag@v0.6.2 \
-	github.com/envoyproxy/protoc-gen-validate@v0.6.2
+GOLANGCI_SKIP_FILES = pkg/api/v1/*.pb.go # files to skip during linting
 
 include make/go/bootstrap.mk
 include make/go/buf.mk
